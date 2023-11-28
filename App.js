@@ -26,9 +26,9 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const auth = getAuth();
-
 const App = () => {
+  const auth = getAuth();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -160,9 +160,102 @@ const CakesGallery = () => {
     "Modo de Preparo do Bolo:\n" +
     "1. Misture todos os ingredientes do bolo em uma tigela.\n" +
     "2. Unte uma forma com manteiga e despeje a massa.\n" +
-    "3. Leve ao forno pré-aquecido a 180 °C por aproximadamente 40 minutos ou até que esteja assado.\n" +
+    "3. Leve ao forno pré-aquecido a 180 °C por aproximadamente 40 minutos ou até que esteja assado.\n" +    
     "4. Despeje a calda sobre o bolo ainda quente e finalize com a outra xícara de goiabada."
-}
+    ,
+      nome: "Bolo de Limão",
+      imagem: "https://www.receiteria.com.br/wp-content/uploads/receitas-de-bolo-de-limao-1-730x449.jpg",
+      informacoes: "Bolo leve e refrescante de limão com cobertura de glace.\n\n" +
+        "Ingredientes:\n" +
+        "- 3 ovos\n" +
+        "- 1 xícara (chá) de açúcar\n" +
+        "- 1/2 xícara (chá) de óleo\n" +
+        "- 1 xícara (chá) de suco de limão\n" +
+        "- 2 xícaras (chá) de farinha de trigo\n" +
+        "- 1 colher (sopa) de fermento em pó\n" +
+        "\nCobertura de Glace:\n" +
+        "- 2 xícaras (chá) de açúcar de confeiteiro\n" +
+        "- 2 colheres (sopa) de suco de limão",
+    },
+    {
+      nome: "Bolo Red Velvet",
+      imagem: "https://www.receitasnestle.com.br/images/default-source/recipes/bolo-red-velvet.jpg",
+      informacoes: "O famoso bolo Red Velvet com cream cheese frosting.\n\n" +
+        "Ingredientes:\n" +
+        "- 2 1/2 xícaras (chá) de farinha de trigo\n" +
+        "- 1 1/2 xícaras (chá) de açúcar\n" +
+        "- 1 colher (chá) de bicarbonato de sódio\n" +
+        "- 1 colher (chá) de sal\n" +
+        "- 1 colher (chá) de cacau em pó\n" +
+        "- 1 1/2 xícaras (chá) de óleo vegetal\n" +
+        "- 1 xícara (chá) de buttermilk\n" +
+        "- 2 ovos\n" +
+        "- 2 colheres (sopa) de corante vermelho\n" +
+        "- 1 colher (chá) de essência de baunilha\n" +
+        "- 1 colher (chá) de vinagre branco\n" +
+        "\nCobertura de Cream Cheese Frosting:\n" +
+        "- 200g de cream cheese\n" +
+        "- 100g de manteiga\n" +
+        "- 2 xícaras (chá) de açúcar de confeiteiro\n" +
+        "- 1 colher (chá) de essência de baunilha",
+    },
+    {
+      nome: "Bolo de Milho",
+      imagem: "https://www.panelinha.com.br/assets/receitas/abertura/bolo-de-milho-cremoso.jpg",
+      informacoes: "Bolo de milho cremoso, uma delícia típica da culinária brasileira.\n\n" +
+        "Ingredientes:\n" +
+        "- 1 lata de milho verde escorrido\n" +
+        "- 1/2 xícara (chá) de óleo\n" +
+        "- 3 ovos\n" +
+        "- 1 xícara (chá) de açúcar\n" +
+        "- 1 xícara (chá) de fubá\n" +
+        "- 1 xícara (chá) de leite\n" +
+        "- 1 colher (sopa) de fermento em pó\n" +
+        "- 1 pitada de sal",
+    },
+    {
+      nome: "Bolo de Maçã",
+      imagem: "https://cdn.panelinha.com.br/receita/1480325200000-Bolo-de-maca.jpg",
+      informacoes: "Bolo úmido de maçã com canela, perfeito para o lanche da tarde.\n\n" +
+        "Ingredientes:\n" +
+        "- 3 maçãs descascadas e cortadas em cubos\n" +
+        "- 2 xícaras (chá) de farinha de trigo\n" +
+        "- 1 xícara (chá) de açúcar\n" +
+        "- 3 ovos\n" +
+        "- 1 xícara (chá) de óleo\n" +
+        "- 1 colher (sopa) de canela em pó\n" +
+        "- 1 colher (chá) de fermento em pó\n" +
+        "- 1 pitada de sal",
+    },
+    {
+      nome: "Bolo de Coco",
+      imagem: "https://www.receiteria.com.br/wp-content/uploads/receitas-de-bolo-de-coco-1-730x449.jpg",
+      informacoes: "Bolo fofinho de coco, uma delícia tropical.\n\n" +
+        "Ingredientes:\n" +
+        "- 3 ovos\n" +
+        "- 1 xícara (chá) de leite de coco\n" +
+        "- 2 xícaras (chá) de açúcar\n" +
+        "- 2 xícaras (chá) de farinha de trigo\n" +
+        "- 1 xícara (chá) de coco ralado\n" +
+        "- 1/2 xícara (chá) de óleo\n" +
+        "- 1 colher (sopa) de fermento em pó\n" +
+        "- 1 pitada de sal",
+    },
+    {
+      nome: "Bolo de Abacaxi",
+      imagem: "https://www.receiteria.com.br/wp-content/uploads/receitas-de-bolo-de-abacaxi-1-730x449.jpg",
+      informacoes: "Bolo úmido de abacaxi com calda caramelizada.\n\n" +
+        "Ingredientes:\n" +
+        "- 1 abacaxi descascado e cortado em rodelas\n" +
+        "- 1 xícara (chá) de açúcar\n" +
+        "- 3 ovos\n" +
+        "- 1/2 xícara (chá) de óleo\n" +
+        "- 2 xícaras (chá) de farinha de trigo\n" +
+        "- 1 xícara (chá) de leite\n" +
+        "- 1 colher (sopa) de fermento em pó\n" +
+        "- 1 pitada de sal",
+    },
+
 
     // ... outros bolos ...
   ];
